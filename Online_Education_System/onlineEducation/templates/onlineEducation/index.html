@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load staticfiles %}
+	<title>Agrogamy+</title>
+	<!link rel="stylesheet" type="text/css" href="style_home.css">
+<style type="text/css">
+    *{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background-image: url({% static "index.jpg" %});
+	background-size: cover;
+}
+
+div.home{
+
+	background-color: #fff;
+	height: 150px;
+	width: 1200px;
+	opacity: .8;
+
+
+}
+
+
+#container ul{
+
+	list-style-type: none;
+}
+
+
+#container ul li{
+
+	background-color: #222266;
+	width:150px;
+	border: 1px solid #fff;
+	text-align: center;
+	height: 50px;
+	float: left;
+	line-height: 50px;
+	color:white;
+	font-size: 18px;
+	position: relative;
+	opacity: .8;
+}
+
+
+#container ul li a:hover{
+
+	background-color: orange;
+}
+#container ul li a{
+	text-decoration: none;
+	color:white;
+	display: block;
+}
+#container ul ul{
+	display: none;
+}
+
+#container ul :hover > ul{
+	display: block;
+}
+
+#container ul ul ul{
+	margin-left: 150px;
+	top: 0px;
+	position: absolute;
+}
+
+</style>
+
+</head>
+<body>
+	<center>
+	 <div class="home">
+	 	<h1 align="center">
+	 		<font face="Algerian" color="magenta" size="80px">
+	 			<marquee behavior="alternate">
+	 			ONLINE EDUCATION
+	 			</marquee>
+
+
+
+	 			<marquee direction="right" behavior="alternate" >
+	 			ONEDU
+	 			</marquee>
+
+	 		</font>
+		 </h1>
+	 </div>
+	 </center>
+
+
+	<div id="container">
+		<ul>
+			<li><a href="http://127.0.0.1:8000/onlineeducation/home/">Home</a></li>
+			<li>Academic...
+				<ul>
+					<li><a href="">Class 4</a></li>
+					<li><a href="">lass 5</a></li>
+					<li><a href="">Class 6</a></li>
+					<li><a href="">Class 7</a></li>
+					<li><a href="">Class 8</a></li>
+					<li>Class 9
+						<ul>
+							<li><a href="">Science</a></li>
+							<li><a href="">Commerce</a> </li>
+							<li><a href="">Arts</a> </li>
+						</ul>
+
+					</li>
+
+
+					<li>Class 10
+						<ul>
+							<li><a href="">Science</a></li>
+							<li><a href="">Commerce</a> </li>
+							<li><a href="">Arts</a> </li>
+						</ul>
+
+
+					</li>
+					<li>Class 11
+						<ul>
+							<li><a href="">Science</a></li>
+							<li><a href="">Commerce</a> </li>
+							<li><a href="">Arts</a> </li>
+						</ul>
+
+					</li>
+					<li>Class 12
+						<ul>
+							<li><a href="">Science</a></li>
+							<li><a href="">Commerce</a> </li>
+							<li><a href="">Arts</a> </li>
+						</ul>
+
+					</li>
+
+				</ul>
+
+			</li>
+
+			<li><a href="http://127.0.0.1:8000/onlineeducation/login">login</a> </li>
+
+			<li><a href="http://127.0.0.1:8000/onlineeducation/signup/">SignUp</a></li>
+
+
+		</ul>
+	</div>
+
+
+
+
+				</form>
+
+
+
+</body>
+</html>

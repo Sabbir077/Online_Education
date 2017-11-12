@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+     {% load staticfiles %}
+	<title></title>
+	<style type="text/css">
+
+	body{
+		background-image: url({% static "sa.jpg" %});
+		background-size:50%;
+	}
+	.aa{
+		width: 300px;
+		height: 260px;
+		background-color: rgba(30,0,0,.6);
+		margin: 0 auto;
+		margin-top: 40px;
+		padding-top: 10px;
+		padding-left: 50px;
+		border-radius: 15px;
+		-webkit-border-radius:15px;
+		-o-border-radius:15px;
+		-moz-border-radius:15px;
+		color:white;
+		font-weight: bolder;
+		box-shadow: inset -4px -4px rgba(0,0,0,.5);
+
+	}
+
+	.aa input[type="text"]{
+		width: 200px;
+		height: 35px;
+		border:0;
+		border-radius: 5px;
+		-webkit-border-radius:5px;
+		-o-border-radius:5px;
+		-moz-border-radius:5px;
+		padding-left: 5px;
+	}
+
+	.aa input[type="password"]{
+		width: 200px;
+		height: 35px;
+		border:0;
+		border-radius: 5px;
+		-webkit-border-radius:5px;
+		-o-border-radius:5px;
+		-moz-border-radius:5px;
+		padding-left: 5px;
+	}
+
+	.aa input[type="submit"]{
+		width: 100px;
+		height: 35px;
+		border:0;
+		border-radius: 5px;
+		-webkit-border-radius:5px;
+		-o-border-radius:5px;
+		-moz-border-radius:5px;
+		background-color: skyblue;
+	}
+
+
+	</style>
+
+</head>
+<body>
+
+<div class="aa">
+	<h1>Login</h1>
+	<blink>abcd</blink>
+	<form action="" method="post">
+        {% csrf_token %}
+		<input type="text" placeholder="Please Enter Username" name="username"><br><br>
+		<input type="password" placeholder="Please Enter Password" name="password"><br><br>
+		<center>
+			<input type="submit" value="Login" >
+		</center>
+
+
+
+	</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+python manage.py runserver
+
+# the app name is music
+
+add the app didectory in settings.py under INSTALLED_APPS = [
+    'music.apps.MusicConfig',
+
+	]
+#if any change in database
+python manage.py makemigrations appname
+python manage.py migrate
+
+
+#for super user
+
+python manage.py createsuperuser

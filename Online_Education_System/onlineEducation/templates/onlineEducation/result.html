@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>your mark is {{marks}}</h1>
+
+
+<form action="/onlineeducation/result/" method="get">
+    {% csrf_token %}
+    {% for mcq in mcqs %}
+        {% if mcq.exam.id == id%}
+        <h5>{{mcq.question}}</h5>
+
+        <ul>
+             <li>{{mcq.optionA}}</li>
+             <li>{{ mcq.optionB}}</li>
+            <li>{{ mcq.optionC}}</li>
+            <li>{{ mcq.optionD}}</li>
+            <li> Correct Ans Is {{ mcq.correctAnswer }}</li>
+        </ul>
+
+        {% endif %}
+
+    {% endfor %}
+
+
+
+</form>
+
+
+
+</body>
+</html>

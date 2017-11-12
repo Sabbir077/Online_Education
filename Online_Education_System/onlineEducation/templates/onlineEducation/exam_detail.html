@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Online Exam</h1>
+
+
+
+
+<form action="/onlineeducation/result/" method="post">
+    {% csrf_token %}
+    <ha
+    {% for mcq in mcqs %}
+        {% if mcq.exam.id == id %}
+
+             <h5>{{mcq.question}}</h5>
+             <input type="radio" name="{{mcq.id}}" value="{{mcq.optionA}}"> {{mcq.optionA}}<br>
+             <input type="radio" name="{{mcq.id}}" value="{{ mcq.optionB}}">{{ mcq.optionB}}<br>
+             <input type="radio" name="{{mcq.id}}" value="{{ mcq.optionC}}">{{ mcq.optionC}}<br>
+             <input type="radio" name="{{mcq.id}}" value="{{ mcq.optionD}}">{{ mcq.optionD}}<br>
+
+
+        {% endif %}
+    {% endfor %}
+
+        <br>
+        <br>
+        <input type="submit" >
+
+</form>
+
+
+
+
+
+</body>
+</html>
